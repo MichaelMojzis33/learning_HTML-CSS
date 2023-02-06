@@ -1,0 +1,88 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+/* Utility components */
+
+html {
+  font-size: 62.5%;
+}
+
+/* Main Styling */
+
+ul {
+  position: relative;
+  margin: 5rem;
+  height: auto;
+  width: 70rem;
+  text-align: center;
+  padding: 4rem;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* ul before */
+
+ul::before {
+  content: '';
+  position: absolute;
+  width: 1rem;
+}
+
+/* list items */
+
+ul li {
+  position: relative;
+  display: inline-block;
+}
+
+/* label */
+ul li label {
+  position: relative;
+}
+
+/* input */
+ul li label input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* icon container */
+ul li label div.icon-container {
+  width: 10rem;
+  height: 10rem;
+  background-color: #777;
+  padding: 2.5rem;
+  margin-left: 4rem;
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  transition: all 0.45s ease-in-out;
+}
+
+div.icon-container i {
+  font-size: 4rem;
+  color: blue;
+  transition: all 0.45s ease-in-out;
+}
+
+/* checkbox checked state */
+ul li label input[type='checkbox']:checked ~ div.icon-container {
+  background: #333;
+  border: 0.3rem solid #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem rgba(68, 243, 33, 0.5), 0 0 2rem rgba(68, 243, 33, 0.5),
+    0 0 3rem rgba(68, 243, 33, 0.5), inset 0 0 1rem rgba(68, 243, 33, 0.5);
+}
+
+/* Icons checked state */
+ul li label input[type='checkbox']:checked ~ div.icon-container i {
+  color: white;
+  text-shadow: 0 0 1rem rgba(68, 243, 33, 0.5), 0 0 2rem rgba(68, 243, 33, 0.5);
+}

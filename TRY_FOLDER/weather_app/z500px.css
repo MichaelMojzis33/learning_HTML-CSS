@@ -1,0 +1,21 @@
+/* Weather info temp container */
+div.weather_info_temp {
+  padding: 1rem;
+}
+/* weather info */
+div.weather_info {
+  font-size: 0.7rem;
+  align-items: flex-end;
+}
+
+/* Main Heading */
+h1 {
+  font-size: 3rem !important;
+  padding: 0 1rem;
+}
+
+/* paragraph */
+
+i {
+  font-size: 2.5rem;
+}

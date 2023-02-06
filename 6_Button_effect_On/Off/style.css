@@ -1,0 +1,67 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+/* Utility components */
+
+html {
+  font-size: 62.5%;
+}
+
+/* Main styling */
+
+/* Form */
+form {
+  margin: 5rem;
+}
+
+/* checkbox */
+input[type='checkbox'] {
+  position: relative;
+  width: 10rem;
+  height: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  outline: none;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.5rem gray;
+  transition: all 0.45s ease;
+}
+
+/* chcekbox checked state */
+input:checked[type='checkbox'] {
+  background: lawngreen;
+}
+
+/* chcekbox NOT checked state */
+input:not(:checked)[type='checkbox'] {
+  background: red;
+}
+
+/* before PE */
+input[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(196, 219, 110);
+  transform: scale(1.1);
+  box-shadow: 0 0.1rem 0.3rem 0.1rem hsla(0, 0%, 50%, 0.35);
+  transition: all 0.45s ease;
+}
+
+/* before PE checked*/
+
+input:checked[type='checkbox']::before {
+  left: 5rem;
+}
